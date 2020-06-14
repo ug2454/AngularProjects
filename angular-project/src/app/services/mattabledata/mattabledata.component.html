@@ -1,0 +1,39 @@
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
+</mat-form-field>
+    <mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="SESSION_ID">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>YR</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.SESSION_ID}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="CLS">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Grade</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.CLS}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="ROLLNO">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Roll#</mat-header-cell>
+            <mat-cell *matCellDef="let row" class="mycolor2"> {{row.ROLLNO }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="STD_NM">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.STD_NM }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="FATH_NM">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>S/O</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.FATH_NM }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="PERCENT">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>%</mat-header-cell>
+            <mat-cell *matCellDef="let row" class="mycolor"> {{row.PERCENT }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

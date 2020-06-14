@@ -1,0 +1,35 @@
+<mat-toolbar color ="primary">
+  <mat-toolbar-row>
+      <span class="example-spacer">   </span>
+    <span>UDAY</span>
+    <span class="example-spacer"></span>
+    
+  </mat-toolbar-row>
+</mat-toolbar>    
+  
+<mat-menu #menu= "matMenu">
+    <a href = "https://www.google.com" target="_blank">
+      <button mat-menu-item>
+        <mat-icon matTooltip ="Connect with Google" ></mat-icon>
+      </button>
+    </a>
+    <a href = "https://www.youtube.com" target="_blank">
+      <button mat-menu-item>
+        <mat-icon matTooltip ="Connect with Youtube" ></mat-icon>
+      </button>
+    </a>
+    <a href = "https://gogoanime.com" target="_blank">
+      <button mat-menu-item>
+        <mat-icon matTooltip ="Connect with Anime"></mat-icon>
+      </button>
+    </a>
+</mat-menu>
+
+
+<mat-card class="example-card">
+  <mat-card-content>
+    <mattabledata></mattabledata>
+  </mat-card-content>
+</mat-card>
+
+<footer></footer>
